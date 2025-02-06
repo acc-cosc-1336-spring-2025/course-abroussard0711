@@ -21,3 +21,14 @@ def use_float_type():
 
     num = num - 50.45
     print (num)
+
+
+def use_sting_type():
+    lang = "Python"
+    print(lang)
+
+    lang = 10
+    print(lang)
+
+    lang = 10.99
+    print(lang)
