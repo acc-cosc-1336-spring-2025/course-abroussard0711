@@ -12,10 +12,12 @@ def main():
     total = float (input ('What is the total value? '))
 
     #creates the result variable with user inputs for options and total    
-    result = decisions.get_options_ratio(options, total) 
+    result = decisions.get_options_ratio (options, total) 
     
     #prints the result
-    print(result)   
+    print (result)   
+
+    print (decisions.get_faculty_rating (result))
 
 #runs the code block beginning on line 7
 main()  
