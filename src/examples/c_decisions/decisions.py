@@ -14,5 +14,11 @@ def is_number_in_range (min_range, max_range, num):
 def is_vowel (letter):
     return letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u'
 
+def is_consonant (letter):
+    return not is_vowel(letter) #using a negate solution to test against other code
+
+def is_even(num):
+    return num % 2 == 0
+
 
     

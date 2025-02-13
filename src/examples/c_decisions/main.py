@@ -1,9 +1,9 @@
 import decisions
 
 def main ():
-    letter = input ("Enter a letter: ")
+    num = input ("Enter a number: ")
 
-    result = decisions.is_vowel(letter)
+    result = decisions.is_even(int(num))
 
     print (result)
 
