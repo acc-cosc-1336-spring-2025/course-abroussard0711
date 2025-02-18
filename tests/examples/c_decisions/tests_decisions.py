@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.c_decisions.decisions import get_generation, is_consonant, is_even, is_number_in_range, is_vowel, test_config
+from src.homework.c_decisions.decisions import get_generation, is_consonant, is_even, is_number_in_range, is_vowel, test_config
 
 class Test_Config(unittest.TestCase):
 
