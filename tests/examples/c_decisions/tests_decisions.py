@@ -29,9 +29,11 @@ class Test_Config(unittest.TestCase):
        self.assertEqual (is_even(2),True) #even
 
     def test_get_generation(self):
-        self.assertEqual(get_generation(1920),"The Greatest Generation")
-        self.assertEqual(get_generation(1930),"The Silent Generation")
-        self.assertEqual(get_generation(1950),"Baby Boomer Generation")
-        self.assertEqual(get_generation(1970),"Generation X")
-        self.assertEqual(get_generation(1985),"Generation Y")
-        self.assertEqual(get_generation(2000),"Generation Z")
+        self.assertEqual(get_generation(1920), "The Greatest Generation")
+        self.assertEqual(get_generation(1930), "The Silent Generation")
+        self.assertEqual(get_generation(1950), "Baby Boomer Generation")
+        self.assertEqual(get_generation(1970), "Generation X")
+        self.assertEqual(get_generation(1985), "Generation Y")
+        self.assertEqual(get_generation(2000), "Generation Z")
+        self.assertEqual(get_generation(2020), "Generation Alpha")
+        self.assertEqual(get_generation(2030), "Invalid Year")

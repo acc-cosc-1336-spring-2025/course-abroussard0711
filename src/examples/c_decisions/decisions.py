@@ -35,7 +35,9 @@ def get_generation(year):
         generation = "Generation Y"
     elif year >= 1995 and year <= 2014:
         generation = "Generation Z"
-    elif year 
+    elif year >= 2015 and year <= 2024:
+        generation = "Generation Alpha"
+    else year = "Invalid Year":
 
     return generation
 
