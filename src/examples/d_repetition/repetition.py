@@ -72,3 +72,24 @@ def get_sum_of_squares_for(num1):
         sum = sum + (n + 1) * (n + 1)
 
     return sum
+
+def nested_while_loop(num):
+    i = 0
+
+    while (i < num):
+        j = 0
+        print (i , "Waiting for inner while loop... ")
+
+        while (j < num):
+            j += 1
+            print (j , "\tInner while loop running... ")
+
+            i += 1
+
+def for_nested_loop(num):
+
+    for i in range (0, num):
+        print('Waiting for inner loop... ')
+
+        for j in range (0, num):
+            print ('\t Inner loop running... ')
