@@ -57,3 +57,18 @@ def handle_menu(user_option):
     else: 
         print ("Invalid menu option")
         
+
+# example code from class on Wed 02/19/25
+
+def use_a_for_range_loop(num):
+    for val in range(0, 3):
+        print(val, 'hello')
+
+
+def get_sum_of_squares_for(num1):
+    sum = 0
+
+    for n in range(0, num1):
+        sum = sum + (n + 1) * (n + 1)
+
+    return sum

@@ -2,10 +2,11 @@
 import repetition
 
 def main():
+    num = input('Ener a number: ')
+    result = repetition.get_sum_of_squares_for(int(num))
 
-    repetition.use_a_while_loop(3)
+    print(result)
 
-    repetition.run_menu()
 
 main()
 
