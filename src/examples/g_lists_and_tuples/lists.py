@@ -63,3 +63,28 @@ def arrays_in_memory():
 
     int_array.append(15)
     print (id(int_array[1]))
+
+def intro_to_lists():
+    even_numbers = [2, 4, 6, 8, 10] # the elements inside the brackets create a list
+    print (even_numbers)
+
+def loop_list_w_while():
+    even_numbers = [2, 4, 6, 8, 10]
+    
+    index = 0
+
+    while (index < len(even_numbers)):
+        print (even_numbers[index])
+        index += 1
+
+def loop_list_w_for():
+    even_numbers = [2, 4, 6, 8, 10]
+    
+    for index in range (0, len(even_numbers)):
+        print (index, even_numbers[index])
+
+def loop_list_w_for_():
+    even_numbers = [2, 4, 6, 8, 10]
+    
+    for num in even_numbers:  # "magic" loop
+        print (num)
