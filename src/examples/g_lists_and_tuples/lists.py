@@ -98,4 +98,6 @@ def list_as_return_value (list1):
 
     print('test return value' + str(id(list1[0])))
     return (list1)
+
+def list_as_return_value_no_param
     
