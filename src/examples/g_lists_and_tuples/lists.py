@@ -99,4 +99,23 @@ def list_as_return_value (list1):
     print('test return value' + str(id(list1[0])))
     return (list1)
 
-    
+def get_total_value_of_list_items_while():
+    total = 0
+    index = 0
+    list1 = [2,4,6,8,10]
+
+    while (index < len(list1)):
+        total += list1[index] #the same as total = total + list1[index]
+
+        index += 1
+    return total
+
+def get_total_value_of_list_items_for():
+    total = 0
+    index = 0
+    list1 = [2,4,6,8,10]
+
+    for i in range (0, len(list1)):
+        total += list1[i]
+
+    return total 
