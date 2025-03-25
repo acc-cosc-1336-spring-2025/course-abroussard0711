@@ -88,3 +88,8 @@ def loop_list_w_for_():
     
     for num in even_numbers:  # "magic" loop
         print (num)
+
+def list_as_parameter(list1):
+    print(id(list1[0]))
+    list1 [0] = 100
+    
