@@ -1,6 +1,8 @@
 #main program
 
 import lists
+import matplotlib.pyplot as plt
+
 
 #lists.use_int_array()
 #lists.modify_list_array_elements()
@@ -10,4 +12,5 @@ import lists
 #lists.intro_to_lists()
 #lists.loop_list_w_while()
 #lists.loop_list_w_for()
-lists.loop_list_w_for_()
+#lists.loop_list_w_for_()
+
