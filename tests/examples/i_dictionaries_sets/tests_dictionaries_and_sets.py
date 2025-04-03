@@ -51,3 +51,29 @@ class Test_Config(unittest.TestCase):
         phone_book = {'Chris':'999-7773', 'David':'555-2226', 'Sam':'888-2221'}
 
         self.assertEqual (len(phone_book), 3)
+
+    def test_dictionary_get (self):
+        phone_book = {'Chris':'999-7773', 'David':'555-2226', 'Sam':'888-2221'}
+
+        result = phone_book.get ('Sam', 'Key not found')
+        self.assertEqual (result, '888-2221')
+
+        result = phone_book.get ('Samm', 'Key not found')
+        self.assertEqual (result, 'Key not found')
+
+    def test_dictionary_items (self):
+        phone_book = {'Chris':'999-7773', 'David':'555-2226', 'Sam':'888-2221'}
+        list_tuple_items = phone_book.items()
+
+        for key, value in phone_book.items():
+            self.assertEqual (value, phone_book[key])
+
+    
+    def test_dictionary_pop_item (self):
+        phone_book = {'Chris':'999-7773', 'David':'555-2226', 'Sam':'888-2221'}
+
+        key, value = phone_book.popitem()
+
+        self.assertEqual (key, 'Sam')
+        self.assertEqual (value, '888-2221')
+        self.assertEqual (phone_book, {'Chris':'999-7773', 'David':'555-2226'})
