@@ -77,3 +77,36 @@ class Test_Config(unittest.TestCase):
         self.assertEqual (key, 'Sam')
         self.assertEqual (value, '888-2221')
         self.assertEqual (phone_book, {'Chris':'999-7773', 'David':'555-2226'})
+
+    def test_set_union (self):
+        set1 = set ([1, 2, 3, 4])
+        set2 = set ([3, 4, 5, 6])
+        expected_set = set ([1,2,3,4,5,6])
+        union_set = set1.union (set2)
+
+        self.assertEqual (union_set, expected_set)
+
+    def test_set_intersection (self):
+        set1 = set ([1, 2, 3, 4])
+        set2 = set ([3, 4, 5, 6])
+        expected_set = set ([3, 4])
+        intersection_set = set1.intersection (set2)
+
+        self.assertEqual (intersection_set, expected_set)
+
+    def test_set_difference (self):
+        set1 = set ([1, 2, 3, 4])
+        set2 = set ([3, 4, 5, 6])
+        expected_set = set ([1, 2])
+        difference_set = set1.difference (set2)
+
+        self.assertEqual (difference_set, expected_set)
+
+    def test_set_symmetric_difference (self):
+        set1 = set ([1, 2, 3, 4])
+        set2 = set ([3, 4, 5, 6])
+        expected_set = set ([1, 2, 5, 6])
+        symmetric_difference_set = set1.symmetric_difference (set2)
+
+        self.assertEqual (symmetric_difference_set, expected_set)
+    
