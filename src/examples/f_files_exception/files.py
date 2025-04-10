@@ -70,7 +70,7 @@ def write_employee_records (file_name):
 
         file.write (id + '\t')
         file.write (name + '\t')
-        file.write (dept + '\t')
+        file.write (dept + '\n')
 
         choice = input ('Enter 1 to continue: ')
 
@@ -99,7 +99,7 @@ def write_prog_lang_list_of_lists (file_name):
     for lang in prog_langs:
         file.write(lang[0] + '\t') #year
         file.write(lang[1] + '\t') #lang
-        file.write(lang[2] + '\t') #level
+        file.write(lang[2] + '\n') #level
 
     file.close ()
 
