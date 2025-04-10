@@ -11,12 +11,19 @@ def main ():
     #files.read_from_file_data_w_while_loop (file_name)
     #files.read_from_file_data_w_for_loop (file_name)
 
-    file_name = 'employees.txt'
+    #file_name = 'employees.txt'
     #files.write_employee_records (file_name)
-    files.read_employee_records (file_name)
+    #files.read_employee_records (file_name)
 
     #file_name = 'langs.txt'
     #files.write_prog_lang_list_of_lists (file_name)
     #files.read_prog_lang_list_of_lists (file_name)
+
+    #file_name = 'langs_d.txt'
+    #files.write_dictionary_records (file_name)
+    #files.read_dictionary_records (file_name)
+
+    #file_name = 'phone_book.txt'
+    #files.pickle_dictionary (file_name)
 
 main ()

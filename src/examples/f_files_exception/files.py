@@ -1,6 +1,7 @@
 #
 
 import files
+import pickle
 
 def write_to_file (file_name):
 
@@ -126,3 +127,41 @@ def read_prog_lang_list_of_lists (file_name):
         print (lang[0],lang[1],lang[2])
 
     file.close ()
+
+
+def write_dictionary_records (file_name):
+
+    prog_langs = {'1' : ['1979', 'C++', 'Bjarne'], '2' : ['1991', 'Java', 'Gosling'], '3' : ['1996', 'Python', 'Guido']}
+
+    with open (file_name, 'w') as file: 
+        for key, value in prog_langs.items ():
+            record_list = value 
+            file.write (key + '\t')
+            file.write (record_list [0] + '\t')
+            file.write (record_list [1] + '\t')
+            file.write (record_list [2] + '\n')
+
+def read_dictionary_records (file_name):
+
+    prog_langs = {}
+
+    with open (file_name, 'r') as file: 
+        for line in file:
+            record = line.split ('\t')
+            key = record [0]
+            year = record [1]
+            lang = record [2]
+            creator = record [3].rstrip ('\n')
+
+            prog_langs [key] = [year, lang, creator]
+
+        print (prog_langs)
+
+def pickle_dictionary (file_name):
+
+    phone_book = {'Chris': '555-1111', 'Katie': '555-2222', 'Joanne': '555-3333'}
+
+    with open(file_name, 'wb') as file:      # 'w' implies opening the file for text data... pickle wants binary 'wb'
+        pickle.dump (phone_book, file)
+
+
