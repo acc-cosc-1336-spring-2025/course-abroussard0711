@@ -23,7 +23,7 @@ def main():
 
         elif choice == '2':
             widget_name = input("Enter the widget name to remove: ")
-            result = dictionary.remove_inventory_widget(inventory, widget_name)
+            result = dictionary.remove_widget_inventory(inventory, widget_name)
             print(result)
             dictionary.print_inventory(inventory)
 
