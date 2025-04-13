@@ -1,26 +1,27 @@
 import unittest
 
-from src.homework.i_dictionaries_sets.dictionary import get_p_distance, get_p_distance_matrix
+from src.homework.i_dictionaries_sets.dictionary import add_inventory, remove_widget_inventory
 
 class Test_Config(unittest.TestCase):
 
-    def test_p_distance (self):
-        seq1 = ['T','T','T','C','C','A','T','T','T','A']
-        seq2 = ['G','A','T','T','C','A','T','T','T','C']
+    def test_add_inventory (self):
 
-        self.assertEqual (get_p_distance (seq1, seq2), 0.4)
+        inventory = {}
 
-    def test_get_p_distance_matrix (self):
-        input_data = [
-        ['T','T','T','C','C','A','T','T','T','A'],
-        ['G','A','T','T','C','A','T','T','T','C'],
-        ['T','T','T','C','C','A','T','T','T','T'],
-        ['G','T','T','C','C','A','T','T','T','A']]
+        add_inventory (inventory, 'Widget1', 10)
+        self.assertEqual (inventory ['Widget1'], 10)
 
-        expected_output = [
-        [0.0, 0.4, 0.1, 0.1],
-        [0.4, 0.0, 0.4, 0.3],
-        [0.1, 0.4, 0.0, 0.2],
-        [0.1, 0.3, 0.2, 0.0]]
+        add_inventory (inventory, 'Widget1', 25)
+        self.assertEqual (inventory ['Widget1'], 35)
 
-        self.assertEqual (get_p_distance_matrix (input_data), expected_output)
+        add_inventory (inventory, 'Widget1', -10)
+        self.assertEqual (inventory ['Widget1'], 25)
+
+def test_remove_widget_inventory(self):
+        inventory = {'Widget1': 10,'Widget2': 20}
+
+        result = remove_widget_inventory(inventory, 'Widget1')
+        self.assertEqual(result, "Record deleted")
+        self.assertEqual(len(inventory), 1)
+        self.assertIn('Widget2', inventory)
+        self.assertNotIn('Widget1', inventory)
